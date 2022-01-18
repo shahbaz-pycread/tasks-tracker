@@ -1,0 +1,18 @@
+{% extends 'tasks_tracker/base.html' %}
+{% block content %}
+<div class="header-bar">
+    <h3>Login</h3>
+</div>
+    
+<div class="card-body">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="button" type="submit" value="Login">
+    </form>
+    <p>Don't have an Account? <a href="{% url 'register' %}">Click Here</a> to register.</p>
+</div>    
+    
+
+    
+{% endblock content %}
